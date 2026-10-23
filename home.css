@@ -186,23 +186,6 @@
   background: linear-gradient(90deg, #e8c37e, #d9a86c);
 }
 
-/* 右上角的大号栏目序号 */
-.home-section::after {
-  content: "01";
-  position: absolute;
-  top: 2px;
-  right: 20px;
-  color: rgba(0, 0, 0, .035);
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.home-section--exam::after {
-  content: "02";
-}
-
 .home-section__head {
   position: relative;
   z-index: 1;
@@ -225,6 +208,22 @@
   font-size: 21px;
   font-weight: 400;
   line-height: 1.4;
+}
+
+.home-section__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  background: #fafafa;
+  color: #b0a0aa;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .home-section__status {
@@ -298,7 +297,7 @@
   background: #fafafa;
 }
 
-.home-subsection--408 {
+.home-subsection--wide {
   grid-column: 1 / -1;
 }
 
@@ -358,10 +357,6 @@
 
   .home-section::before {
     left: 24px;
-  }
-
-  .home-section::after {
-    font-size: 52px;
   }
 
   .home-section__title {
