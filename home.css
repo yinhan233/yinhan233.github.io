@@ -287,6 +287,10 @@
   background: #fafafa;
 }
 
+.home-subsection--wide {
+  grid-column: 1 / -1;
+}
+
 .home-subsection__title {
   color: #555;
   font-size: 14px;
