@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 操作系统（OS）   涉及知识点 进程状态及其转换    题目内容：关于进程状态及其转换，下列说法正确的是（ ）。 选项：  A. 运行态进程因请求 I&#x2F;O 而转为阻塞态后，I&#x2F;O 完成时可直接转为运行态 B. 阻塞态进程等待的事件发生后，通常先转为就绪态 C. 就绪态进程即使尚未获得处理机，也可以直接转为阻塞态 D.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-07T12:49:00.000Z">
-<meta property="article:modified_time" content="2026-11-09T08:34:47.431Z">
+<meta property="article:modified_time" content="2026-11-09T12:26:10.226Z">
 <meta property="article:author" content="Lyinhan">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="BOK27">
@@ -221,7 +221,7 @@
 <h2 id="3-正确答案与解析">3. 正确答案与解析</h2>
 <p><strong>正确答案</strong>：<strong>B</strong></p>
 <p><strong>题目解析</strong>：</p>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash___精修于___2026-11-09 16:25</span></p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 精修于 2026-11-09 16:25</span></p>
 <p>逐项分析：</p>
 <ul>
 <li><strong>A 错</strong>：运行态进程因请求 I/O 转为阻塞态；I/O 完成后，它只是重新具备运行条件，应先转为<strong>就绪态</strong>，等待调度程序分配处理机，不能直接转为运行态。</li>
@@ -230,12 +230,21 @@
 <li><strong>D 错</strong>：运行态进程转为就绪态有两种常见原因：时间片用完，或被更高优先级的进程<strong>抢占</strong>。因此“只有时间片用完”过于绝对。</li>
 </ul>
 <p>故选 B。</p>
+<p><strong>图解</strong>：</p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-09 20:25</span></p>
+<div class="mermaid">stateDiagram-v2
+    [*] --&gt; 就绪
+    就绪 --&gt; 运行: 调度
+    运行 --&gt; 就绪: 时间片完 / 被抢占
+    运行 --&gt; 阻塞: 请求 I/O / 等待事件
+    阻塞 --&gt; 就绪: 事件完成
+    运行 --&gt; [*]: 终止</div>
 <p><strong>解题关键</strong>：</p>
 <blockquote>
 <p>记住状态转换的方向：<strong>阻塞 → 就绪 → 运行</strong>。阻塞态不能直接到运行态；就绪态不能直接到阻塞态；运行态可以因时间片完或被抢占回到就绪态。</p>
 </blockquote>
 <h2 id="4-知识点补充">4. 知识点补充</h2>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash_生成于2026-11-09 16:25</span></p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-09 16:25</span></p>
 <h3 id="4-1-进程状态转换">4.1 进程状态转换</h3>
 <table>
 <thead>
@@ -439,7 +448,7 @@
     </a>
   
   
-    <a href="/2026/11/07/cuotiben/bok27/OS/OS%E6%A8%A1%E6%9D%BF/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2026/11/07/cuotiben/bok27/OS/OS_day4/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">OS每日一题模板</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -619,19 +628,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CO</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+                <a href="javascript:void(0)" class="js-tag color3">CN</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,15 +656,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -816,5 +825,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+<script src="/js/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: "default" });</script>
 </body>
 </html>

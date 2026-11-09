@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 操作系统（OS）   涉及知识点 用户态与内核态、特权指令、系统调用、陷入机制    题目内容：关于处理器状态以及用户态程序进入内核态的机制，下列说法正确的是（ ）。 选项：  A. 用户程序可以直接修改 PSW 中的特权位，从而主动由用户态进入内核态 B. 用户程序执行系统调用时，可通过陷入（trap）机制使处理器进">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-07T12:49:00.000Z">
-<meta property="article:modified_time" content="2026-11-09T08:34:47.430Z">
+<meta property="article:modified_time" content="2026-11-09T12:26:10.220Z">
 <meta property="article:author" content="Lyinhan">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="BOK27">
@@ -221,7 +221,7 @@
 <h2 id="3-正确答案与解析">3. 正确答案与解析</h2>
 <p><strong>正确答案</strong>：<strong>B</strong></p>
 <p><strong>题目解析</strong>：</p>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash_生成于2026-11-09 16:25</span></p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-09 16:25</span></p>
 <p>逐项分析：</p>
 <ul>
 <li><strong>A 错</strong>：PSW 中的特权位（模式位）决定 CPU 当前处于用户态还是内核态，用户程序<strong>无权直接修改</strong>；若允许用户程序随意修改，保护机制就失效了。</li>
@@ -230,13 +230,19 @@
 <li><strong>D 错</strong>：编译器只负责把普通函数调用编译成调用指令，<strong>不会</strong>把普通函数调用自动转换为特权指令。系统调用通常由库函数封装，库函数内部执行陷入指令完成状态切换。</li>
 </ul>
 <p>故选 B。</p>
+<p><strong>图解</strong>：</p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-09 20:25</span></p>
+<div class="mermaid">flowchart LR
+    U[&quot;用户态&quot;] --&gt;|&quot;执行陷入指令 trap&quot;| K[&quot;内核态&quot;]
+    K --&gt;|&quot;服务完成，返回&quot;| U
+    N[&quot;普通赋值、普通函数调用&quot;] --&gt;|&quot;不进入内核态&quot;| U</div>
 <p><strong>精修说明</strong>：原笔记“例如 <code>read()</code> 等库函数确实会调用特权指令，但是由编译器调用转换”表述有误。<code>read()</code> 是库函数封装，内部执行的是<strong>陷入指令</strong>（trap / <code>syscall</code>），而陷入指令本身<strong>不是特权指令</strong>；编译器也不会把普通函数调用“转换”为特权指令。</p>
 <p><strong>解题关键</strong>：</p>
 <blockquote>
 <p>用户程序主动请求操作系统服务的标准入口是<strong>陷入（trap）</strong>：用户程序执行陷入指令，硬件完成模式切换。用户程序不能直接改 PSW，也不能执行特权指令。</p>
 </blockquote>
 <h2 id="4-知识点补充">4. 知识点补充</h2>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash___精修于___2026-11-09 16:25</span></p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 精修于 2026-11-09 16:25</span></p>
 <h3 id="4-1-用户态与内核态">4.1 用户态与内核态</h3>
 <table>
 <thead>
@@ -625,19 +631,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CO</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+                <a href="javascript:void(0)" class="js-tag color3">CN</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -653,15 +659,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -822,5 +828,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+<script src="/js/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: "default" });</script>
 </body>
 </html>
