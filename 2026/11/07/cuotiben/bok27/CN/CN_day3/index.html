@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="https://yinhan233.github.io">
   <title>CN每日一题 Day3 | Rin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 题目   项目 内容    来源 BOK27 考研每日一题   科目 计算机网络（CN）   涉及知识点 IPv4 数据报分片、MTU、片偏移   题目内容：某 IPv4 数据报总长度为 $3820\text{ B}$，首部长度为 $20\text{ B}$。该数据报经过一个链路层 MTU 为 $1400\text{ B}$ 的网络时需要分片，且各分片首部长度均为 $20\text{ B}$">
+  <meta name="description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 计算机网络（CN）   涉及知识点 IPv4 数据报分片、MTU、片偏移    题目内容：某 IPv4 数据报总长度为 3820 B3820\text{ B}3820 B，首部长度为 20 B20\text{ B}20 B。该数据报经过一个链路层 MTU 为 1400 B1400\text{ B}1400 B 的网络时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CN每日一题 Day3">
 <meta property="og:url" content="https://yinhan233.github.io/2026/11/07/cuotiben/bok27/CN/CN_day3/index.html">
 <meta property="og:site_name" content="Rin&#39;s Blog">
-<meta property="og:description" content="1. 题目   项目 内容    来源 BOK27 考研每日一题   科目 计算机网络（CN）   涉及知识点 IPv4 数据报分片、MTU、片偏移   题目内容：某 IPv4 数据报总长度为 $3820\text{ B}$，首部长度为 $20\text{ B}$。该数据报经过一个链路层 MTU 为 $1400\text{ B}$ 的网络时需要分片，且各分片首部长度均为 $20\text{ B}$">
+<meta property="og:description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 计算机网络（CN）   涉及知识点 IPv4 数据报分片、MTU、片偏移    题目内容：某 IPv4 数据报总长度为 3820 B3820\text{ B}3820 B，首部长度为 20 B20\text{ B}20 B。该数据报经过一个链路层 MTU 为 1400 B1400\text{ B}1400 B 的网络时">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-07T12:50:00.000Z">
 <meta property="article:modified_time" content="2026-11-09T08:34:47.429Z">
@@ -41,7 +41,8 @@
 
   
 
-<meta name="generator" content="Hexo 8.1.2"></head>
+<meta name="generator" content="Hexo 8.1.2">  <link rel="stylesheet" href="/css/katex/katex.min.css">
+</head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -191,121 +192,143 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-题目"><a href="#1-题目" class="headerlink" title="1. 题目"></a>1. 题目</h2><table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="left">内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>来源</strong></td>
-<td align="left">BOK27 考研每日一题</td>
-</tr>
-<tr>
-<td align="center"><strong>科目</strong></td>
-<td align="left">计算机网络（CN）</td>
-</tr>
-<tr>
-<td align="center"><strong>涉及知识点</strong></td>
-<td align="left">IPv4 数据报分片、MTU、片偏移</td>
-</tr>
-</tbody></table>
-<p><strong>题目内容</strong>：某 IPv4 数据报总长度为 $3820\text{ B}$，首部长度为 $20\text{ B}$。该数据报经过一个链路层 MTU 为 $1400\text{ B}$ 的网络时需要分片，且各分片首部长度均为 $20\text{ B}$。则第 $3$ 个分片的片偏移字段值和总长度分别为（ ）。</p>
-<p><strong>选项</strong>：</p>
-<ul>
-<li>A. $172,\ 1396\text{ B}$</li>
-<li>B. $344,\ 1068\text{ B}$</li>
-<li>C. $345,\ 1060\text{ B}$</li>
-<li>D. $344,\ 1048\text{ B}$</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="2-我的作答"><a href="#2-我的作答" class="headerlink" title="2. 我的作答"></a>2. 我的作答</h2><div style="margin:0 0 12px;padding:8px 14px;border-left:4px solid #e53935;border-radius:6px;background:rgba(229,57,53,.08);color:#e53935;font-weight:700">✘ 本题作答错误</div>
-
-<p><strong>我的答案</strong>：<span style="color:#e53935;font-weight:700">C</span></p>
-<p><strong>错选</strong>：<span style="color:#e53935;font-weight:700">C</span></p>
-<h2 id="3-正确答案与解析"><a href="#3-正确答案与解析" class="headerlink" title="3. 正确答案与解析"></a>3. 正确答案与解析</h2><p><strong>正确答案</strong>：<strong>B</strong></p>
-<p><strong>题目解析</strong>：</p>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek&#x2F;deepseek-v4-flash&#95;&#95;&#95;精修于&#95;&#95;&#95;2026-11-09 16:25</span></p>
-<p><strong>第一步：求数据部分长度。</strong></p>
-<p>$$<br>3820-20&#x3D;3800\text{ B}<br>$$</p>
-<p><strong>第二步：求每片可携带的最大数据长度。</strong></p>
-<p>MTU 限制的是<strong>整个 IP 数据报</strong>（首部 + 数据）的长度，因此每片数据部分最多为</p>
-<p>$$<br>1400-20&#x3D;1380\text{ B}<br>$$</p>
-<p>除最后一片外，每片数据长度必须是 $8$ 的整数倍：</p>
-<p>$$<br>\left\lfloor\frac{1380}{8}\right\rfloor\times8&#x3D;172\times8&#x3D;1376\text{ B}<br>$$</p>
-<p><strong>第三步：分片。</strong></p>
-<p>前两片各携带 $1376\text{ B}$，剩余</p>
-<p>$$<br>3800-2\times1376&#x3D;3800-2752&#x3D;1048\text{ B}<br>$$</p>
+        <h2 id="1-题目">1. 题目</h2>
 <table>
 <thead>
 <tr>
-<th align="center">分片</th>
-<th align="center">数据范围（字节）</th>
-<th align="center">数据长度</th>
-<th align="center">片偏移</th>
-<th align="center">总长度</th>
-<th align="center">MF</th>
+<th style="text-align:center">项目</th>
+<th style="text-align:left">内容</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">第 1 片</td>
-<td align="center">$0\sim1375$</td>
-<td align="center">$1376$</td>
-<td align="center">$0$</td>
-<td align="center">$1396$</td>
-<td align="center">$1$</td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>来源</strong></td>
+<td style="text-align:left">BOK27 考研每日一题</td>
 </tr>
 <tr>
-<td align="center">第 2 片</td>
-<td align="center">$1376\sim2751$</td>
-<td align="center">$1376$</td>
-<td align="center">$172$</td>
-<td align="center">$1396$</td>
-<td align="center">$1$</td>
+<td style="text-align:center"><strong>科目</strong></td>
+<td style="text-align:left">计算机网络（CN）</td>
 </tr>
 <tr>
-<td align="center">第 3 片</td>
-<td align="center">$2752\sim3799$</td>
-<td align="center">$1048$</td>
-<td align="center">$344$</td>
-<td align="center">$1068$</td>
-<td align="center">$0$</td>
+<td style="text-align:center"><strong>涉及知识点</strong></td>
+<td style="text-align:left">IPv4 数据报分片、MTU、片偏移</td>
 </tr>
-</tbody></table>
-<p>其中片偏移的计算依据是“本片数据起点之前的数据字节数 $\div 8$”：</p>
-<p>$$<br>\frac{1376\times2}{8}&#x3D;\frac{2752}{8}&#x3D;344<br>$$</p>
+</tbody>
+</table>
+<p><strong>题目内容</strong>：某 IPv4 数据报总长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3820</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">3820\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">3820</span><span class="mord text"><span class="mord"> B</span></span></span></span></span>，首部长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">20\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord"> B</span></span></span></span></span>。该数据报经过一个链路层 MTU 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1400</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1400\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1400</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 的网络时需要分片，且各分片首部长度均为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">20\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord"> B</span></span></span></span></span>。则第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span> 个分片的片偏移字段值和总长度分别为（ ）。</p>
+<p><strong>选项</strong>：</p>
+<ul>
+<li>A. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>172</mn><mo separator="true">,</mo><mtext> </mtext><mn>1396</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">172,\ 1396\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">172</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1396</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></li>
+<li>B. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>344</mn><mo separator="true">,</mo><mtext> </mtext><mn>1068</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">344,\ 1068\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">344</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1068</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></li>
+<li>C. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>345</mn><mo separator="true">,</mo><mtext> </mtext><mn>1060</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">345,\ 1060\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">345</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1060</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></li>
+<li>D. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>344</mn><mo separator="true">,</mo><mtext> </mtext><mn>1048</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">344,\ 1048\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">344</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1048</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></li>
+</ul>
+<span id="more"></span>
+<h2 id="2-我的作答">2. 我的作答</h2>
+<div style="margin:0 0 12px;padding:8px 14px;border-left:4px solid #e53935;border-radius:6px;background:rgba(229,57,53,.08);color:#e53935;font-weight:700">✘ 本题作答错误</div>
+<p><strong>我的答案</strong>：<span style="color:#e53935;font-weight:700">C</span></p>
+<p><strong>错选</strong>：<span style="color:#e53935;font-weight:700">C</span></p>
+<h2 id="3-正确答案与解析">3. 正确答案与解析</h2>
+<p><strong>正确答案</strong>：<strong>B</strong></p>
+<p><strong>题目解析</strong>：</p>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash___精修于___2026-11-09 16:25</span></p>
+<p><strong>第一步：求数据部分长度。</strong></p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>3820</mn><mo>−</mo><mn>20</mn><mo>=</mo><mn>3800</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">3820-20=3800\text{ B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3820</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">3800</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></span></p>
+<p><strong>第二步：求每片可携带的最大数据长度。</strong></p>
+<p>MTU 限制的是<strong>整个 IP 数据报</strong>（首部 + 数据）的长度，因此每片数据部分最多为</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1400</mn><mo>−</mo><mn>20</mn><mo>=</mo><mn>1380</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1400-20=1380\text{ B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1400</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1380</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></span></p>
+<p>除最后一片外，每片数据长度必须是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span> 的整数倍：</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">⌊</mo><mfrac><mn>1380</mn><mn>8</mn></mfrac><mo fence="true">⌋</mo></mrow><mo>×</mo><mn>8</mn><mo>=</mo><mn>172</mn><mo>×</mo><mn>8</mn><mo>=</mo><mn>1376</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">\left\lfloor\frac{1380}{8}\right\rfloor\times8=172\times8=1376\text{ B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌊</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1380</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌋</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">172</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1376</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></span></p>
+<p><strong>第三步：分片。</strong></p>
+<p>前两片各携带 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1376</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1376\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1376</span><span class="mord text"><span class="mord"> B</span></span></span></span></span>，剩余</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>3800</mn><mo>−</mo><mn>2</mn><mo>×</mo><mn>1376</mn><mo>=</mo><mn>3800</mn><mo>−</mo><mn>2752</mn><mo>=</mo><mn>1048</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">3800-2\times1376=3800-2752=1048\text{ B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3800</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1376</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3800</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2752</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1048</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">分片</th>
+<th style="text-align:center">数据范围（字节）</th>
+<th style="text-align:center">数据长度</th>
+<th style="text-align:center">片偏移</th>
+<th style="text-align:center">总长度</th>
+<th style="text-align:center">MF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">第 1 片</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><mn>1375</mn></mrow><annotation encoding="application/x-tex">0\sim1375</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1375</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1376</mn></mrow><annotation encoding="application/x-tex">1376</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1376</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1396</mn></mrow><annotation encoding="application/x-tex">1396</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1396</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">第 2 片</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1376</mn><mo>∼</mo><mn>2751</mn></mrow><annotation encoding="application/x-tex">1376\sim2751</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1376</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2751</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1376</mn></mrow><annotation encoding="application/x-tex">1376</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1376</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>172</mn></mrow><annotation encoding="application/x-tex">172</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">172</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1396</mn></mrow><annotation encoding="application/x-tex">1396</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1396</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">第 3 片</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2752</mn><mo>∼</mo><mn>3799</mn></mrow><annotation encoding="application/x-tex">2752\sim3799</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2752</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3799</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1048</mn></mrow><annotation encoding="application/x-tex">1048</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1048</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>344</mn></mrow><annotation encoding="application/x-tex">344</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">344</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1068</mn></mrow><annotation encoding="application/x-tex">1068</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1068</span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>其中片偏移的计算依据是“本片数据起点之前的数据字节数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>÷</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\div 8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">÷</span><span class="mord">8</span></span></span></span>”：</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mn>1376</mn><mo>×</mo><mn>2</mn></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>2752</mn><mn>8</mn></mfrac><mo>=</mo><mn>344</mn></mrow><annotation encoding="application/x-tex">\frac{1376\times2}{8}=\frac{2752}{8}=344
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1376</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2752</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">344</span></span></span></span></span></p>
 <p>第 3 片总长度：</p>
-<p>$$<br>1048+20&#x3D;1068\text{ B}<br>$$</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1048</mn><mo>+</mo><mn>20</mn><mo>=</mo><mn>1068</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1048+20=1068\text{ B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1048</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1068</span><span class="mord text"><span class="mord"> B</span></span></span></span></span></span></p>
 <p>故选 B。</p>
-<p><strong>错因分析</strong>：选项 C 的片偏移 $345$ 和总长度 $1060$ 都不对。$345\times8&#x3D;2760$，会把第 3 片的数据起点推到第 2 片末尾之后 $8$ 字节，出现空洞；总长度 $1060$ 对应数据长度 $1040$，与剩余 $1048\text{ B}$ 不符。</p>
-<h2 id="4-知识点补充"><a href="#4-知识点补充" class="headerlink" title="4. 知识点补充"></a>4. 知识点补充</h2><p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek&#x2F;deepseek-v4-flash&#95;生成于2026-11-09 16:25</span></p>
-<h3 id="4-1-IPv4-分片规则"><a href="#4-1-IPv4-分片规则" class="headerlink" title="4.1 IPv4 分片规则"></a>4.1 IPv4 分片规则</h3><ol>
-<li><p><strong>MTU 约束</strong>：链路层 MTU 是本帧数据部分的最大长度；IP 数据报作为帧的数据部分，故有</p>
-<p>$$<br>\text{IP 数据报总长度}\le \text{MTU}<br>$$</p>
+<p><strong>错因分析</strong>：选项 C 的片偏移 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>345</mn></mrow><annotation encoding="application/x-tex">345</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">345</span></span></span></span> 和总长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1060</mn></mrow><annotation encoding="application/x-tex">1060</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1060</span></span></span></span> 都不对。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>345</mn><mo>×</mo><mn>8</mn><mo>=</mo><mn>2760</mn></mrow><annotation encoding="application/x-tex">345\times8=2760</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">345</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2760</span></span></span></span>，会把第 3 片的数据起点推到第 2 片末尾之后 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span> 字节，出现空洞；总长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1060</mn></mrow><annotation encoding="application/x-tex">1060</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1060</span></span></span></span> 对应数据长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1040</mn></mrow><annotation encoding="application/x-tex">1040</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1040</span></span></span></span>，与剩余 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1048</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1048\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1048</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 不符。</p>
+<h2 id="4-知识点补充">4. 知识点补充</h2>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash_生成于2026-11-09 16:25</span></p>
+<h3 id="4-1-IPv4-分片规则">4.1 IPv4 分片规则</h3>
+<ol>
+<li>
+<p><strong>MTU 约束</strong>：链路层 MTU 是本帧数据部分的最大长度；IP 数据报作为帧的数据部分，故有</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>IP 数据报总长度</mtext><mo>≤</mo><mtext>MTU</mtext></mrow><annotation encoding="application/x-tex">\text{IP 数据报总长度}\le \text{MTU}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord text"><span class="mord">IP </span><span class="mord cjk_fallback">数据报总长度</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">MTU</span></span></span></span></span></span></p>
 <p>即分片后每片的总长度（首部 + 数据）不超过 MTU。</p>
 </li>
-<li><p><strong>数据长度对齐</strong>：除最后一片外，每片的数据长度必须是 $8\text{ B}$ 的整数倍。</p>
+<li>
+<p><strong>数据长度对齐</strong>：除最后一片外，每片的数据长度必须是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">8\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">8</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 的整数倍。</p>
 </li>
-<li><p><strong>片偏移</strong>：以 $8\text{ B}$ 为单位，表示本片数据在原数据报数据部分中的相对位置：</p>
-<p>$$<br>\text{片偏移}&#x3D;\frac{\text{本片之前的数据字节数}}{8}<br>$$</p>
+<li>
+<p><strong>片偏移</strong>：以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">8\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">8</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 为单位，表示本片数据在原数据报数据部分中的相对位置：</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>片偏移</mtext><mo>=</mo><mfrac><mtext>本片之前的数据字节数</mtext><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">\text{片偏移}=\frac{\text{本片之前的数据字节数}}{8}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">片偏移</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">本片之前的数据字节数</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 </li>
-<li><p><strong>MF 位</strong>：除最后一片外均为 $1$，最后一片为 $0$。</p>
+<li>
+<p><strong>MF 位</strong>：除最后一片外均为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，最后一片为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</p>
 </li>
-<li><p><strong>标识、源&#x2F;目的地址</strong>：同一数据报的所有分片相同；<strong>DF</strong> 置 $0$ 表示允许分片。</p>
+<li>
+<p><strong>标识、源/目的地址</strong>：同一数据报的所有分片相同；<strong>DF</strong> 置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 表示允许分片。</p>
 </li>
-<li><p><strong>首部复制</strong>：每个分片都带自己的 IP 首部（通常各 $20\text{ B}$），选项字段按规则复制。</p>
+<li>
+<p><strong>首部复制</strong>：每个分片都带自己的 IP 首部（通常各 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">20\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord"> B</span></span></span></span></span>），选项字段按规则复制。</p>
 </li>
 </ol>
-<h3 id="4-2-易混淆概念"><a href="#4-2-易混淆概念" class="headerlink" title="4.2 易混淆概念"></a>4.2 易混淆概念</h3><blockquote>
-<p><strong>片偏移的单位 vs 总长度的单位</strong>：片偏移以 $8\text{ B}$ 为单位，总长度以 $1\text{ B}$ 为单位，二者不能混用。</p>
+<h3 id="4-2-易混淆概念">4.2 易混淆概念</h3>
+<blockquote>
+<p><strong>片偏移的单位 vs 总长度的单位</strong>：片偏移以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">8\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">8</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 为单位，总长度以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mtext> B</mtext></mrow><annotation encoding="application/x-tex">1\text{ B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord"> B</span></span></span></span></span> 为单位，二者不能混用。</p>
 </blockquote>
 <blockquote>
-<p><strong>MTU 限制的是“总长度”还是“数据长度”</strong>：MTU 限制 IP 数据报的<strong>总长度</strong>（首部 + 数据），所以每片数据部分最多为 $\text{MTU}-20$，不能直接拿 $1400$ 当数据长度。</p>
+<p><strong>MTU 限制的是“总长度”还是“数据长度”</strong>：MTU 限制 IP 数据报的<strong>总长度</strong>（首部 + 数据），所以每片数据部分最多为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>MTU</mtext><mo>−</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\text{MTU}-20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">MTU</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span>，不能直接拿 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1400</mn></mrow><annotation encoding="application/x-tex">1400</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1400</span></span></span></span> 当数据长度。</p>
 </blockquote>
 <blockquote>
-<p><strong>最后一片的数据长度</strong>：可以不是 $8$ 的整数倍；但片偏移本身始终是整数，因为它是“字节数 $\div 8$”。</p>
+<p><strong>最后一片的数据长度</strong>：可以不是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span> 的整数倍；但片偏移本身始终是整数，因为它是“字节数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>÷</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\div 8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">÷</span><span class="mord">8</span></span></span></span>”。</p>
 </blockquote>
 <blockquote>
 <p><strong>“分片增加了数据量”</strong>：每个分片都要重新加 IP 首部，因此所有分片的总长度之和大于原数据报总长度。</p>
@@ -455,8 +478,8 @@
     </a>
   
   
-    <a href="/2026/11/07/cuotiben/bok27/OS/OS%E6%A8%A1%E6%9D%BF/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OS每日一题模板</div>
+    <a href="/2026/11/07/cuotiben/bok27/CN/CN%E6%A8%A1%E6%9D%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CN每日一题模板</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -627,6 +650,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">每日一题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">BOK27</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">考研数学</a>
               </li>
              
@@ -652,30 +699,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">汤小丹</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">每日一题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">BOK27</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CO</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">DS</a>
               </li>
             
             <div class="clearfix"></div>
