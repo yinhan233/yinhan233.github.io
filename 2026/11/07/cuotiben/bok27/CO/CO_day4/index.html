@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 计算机组成原理（CO）   涉及知识点 IEEE 754 单精度、非规格化数、小端存储    题目内容：某计算机按字节编址，采用小端方式存储数据，float 型数据采用 IEEE 754 单精度格式。已知变量 xxx 的值为 IEEE 754 单精度格式能表达的最大非规格化数。若 xxx 从地址 1000H1000\t">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-07T12:52:00.000Z">
-<meta property="article:modified_time" content="2026-11-09T12:36:17.513Z">
+<meta property="article:modified_time" content="2026-11-13T03:17:52.555Z">
 <meta property="article:author" content="Lyinhan">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="BOK27">
@@ -257,25 +257,21 @@
 <p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup><mo stretchy="false">)</mo><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>126</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(1-2^{-23})\times2^{-126}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">126</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p>按<strong>小端方式</strong>存储时，低地址存低字节，因此从地址 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1000</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1000\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1000</span><span class="mord text"><span class="mord">H</span></span></span></span></span> 开始：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">地址</th>
-<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1000</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1000\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1000</span><span class="mord text"><span class="mord">H</span></span></span></span></span></th>
-<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1001</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1001\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1001</span><span class="mord text"><span class="mord">H</span></span></span></span></span></th>
-<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1002</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1002\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1002</span><span class="mord text"><span class="mord">H</span></span></span></span></span></th>
-<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1003</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1003\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1003</span><span class="mord text"><span class="mord">H</span></span></span></span></span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">内容</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FFH</mtext></mrow><annotation encoding="application/x-tex">\text{FFH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">FFH</span></span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FFH</mtext></mrow><annotation encoding="application/x-tex">\text{FFH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">FFH</span></span></span></span></span></td>
-<td style="text-align:center"><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>7FH</mtext></mrow><annotation encoding="application/x-tex">\text{7FH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">7FH</span></span></span></span></span></strong></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>00</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">00\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">00</span><span class="mord text"><span class="mord">H</span></span></span></span></span></td>
-</tr>
-</tbody>
+<table style="width:100%;table-layout:fixed;border-collapse:collapse;text-align:center;font-size:12px">
+  <tr>
+    <th style="border:1px solid rgba(127,127,127,.45);padding:3px">地址</th>
+    <th style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>1000H</code></th>
+    <th style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>1001H</code></th>
+    <th style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>1002H</code></th>
+    <th style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>1003H</code></th>
+  </tr>
+  <tr>
+    <td style="border:1px solid rgba(127,127,127,.45);padding:3px">内容</td>
+    <td style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>FFH</code></td>
+    <td style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>FFH</code></td>
+    <td style="border:1px solid rgba(127,127,127,.45);padding:3px"><strong><code>7FH</code></strong></td>
+    <td style="border:1px solid rgba(127,127,127,.45);padding:3px"><code>00H</code></td>
+  </tr>
 </table>
 <p>所以地址 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1002</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1002\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1002</span><span class="mord text"><span class="mord">H</span></span></span></span></span> 中存放的是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>7FH</mtext></mrow><annotation encoding="application/x-tex">\text{7FH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">7FH</span></span></span></span></span>，选 B。</p>
 <p><strong>错因分析</strong>：选项 C 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FFH</mtext></mrow><annotation encoding="application/x-tex">\text{FFH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">FFH</span></span></span></span></span> 出现在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1000</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1000\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1000</span><span class="mord text"><span class="mord">H</span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1001</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1001\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1001</span><span class="mord text"><span class="mord">H</span></span></span></span></span>，不是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1002</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1002\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1002</span><span class="mord text"><span class="mord">H</span></span></span></span></span>。若把存储方式误当成大端，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1002</mn><mtext>H</mtext></mrow><annotation encoding="application/x-tex">1002\text{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1002</span><span class="mord text"><span class="mord">H</span></span></span></span></span> 才会是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FFH</mtext></mrow><annotation encoding="application/x-tex">\text{FFH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">FFH</span></span></span></span></span>；本题明确是小端，因此第三字节是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>7FH</mtext></mrow><annotation encoding="application/x-tex">\text{7FH}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">7FH</span></span></span></span></span>。</p>
@@ -530,8 +526,8 @@
     </a>
   
   
-    <a href="/2026/11/07/cuotiben/bok27/DS/DS_day1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">DS每日一题 Day1</div>
+    <a href="/2026/11/07/cuotiben/bok27/CO/CO_day5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CO每日一题 Day5</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -694,11 +690,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机组成</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机组成</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -726,6 +722,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">考研数学</a>
               </li>
              
@@ -735,14 +739,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">格林公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
               </li>
              
               <li class="article-tag-list-item">

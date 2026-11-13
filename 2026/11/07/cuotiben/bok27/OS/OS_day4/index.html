@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 题目    项目 内容     来源 BOK27 考研每日一题   科目 操作系统（OS）   涉及知识点 抢占式短作业优先（SRTF）、周转时间、甘特图    题目内容：某系统采用抢占式短作业优先调度算法（最短剩余时间优先，SRTF）。444 个进程的到达时间和 CPU 运行时间如下表所示。    进程 到达时间 CPU 运行时间     P1P_1P1​ 000 888   P2P_2P">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-07T12:49:00.000Z">
-<meta property="article:modified_time" content="2026-11-09T12:36:30.175Z">
+<meta property="article:modified_time" content="2026-11-13T03:02:48.574Z">
 <meta property="article:author" content="Lyinhan">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="BOK27">
@@ -268,9 +268,18 @@
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">t=15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">15</span></span></span></span>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">P_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 完成。</li>
 </ul>
 <p><strong>图解</strong>：</p>
-<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-09 20:35</span></p>
-<div class="mermaid">flowchart LR
-    A[&quot;0-1：P1&quot;] --&gt; B[&quot;1-3：P2&quot;] --&gt; C[&quot;3-4：P3&quot;] --&gt; D[&quot;4-6：P2&quot;] --&gt; E[&quot;6-8：P4&quot;] --&gt; F[&quot;8-15：P1&quot;]</div>
+<p><span style="display:inline-block;padding:1px 8px;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.08);font-size:12px;line-height:20px">deepseek/deepseek-v4-flash 生成于 2026-11-13 11:01</span></p>
+<div class="mermaid">gantt
+    title SRTF 调度（时间单位：1）
+    dateFormat HH:mm
+    axisFormat %M
+    section 运行
+    P1 :p1a, 00:00, 1m
+    P2 :p2a, 00:01, 2m
+    P3 :p3a, 00:03, 1m
+    P2 :p2b, 00:04, 2m
+    P4 :p4a, 00:06, 2m
+    P1 :p1b, 00:08, 7m</div>
 <p>完成时间与周转时间：</p>
 <table>
 <thead>
@@ -504,8 +513,8 @@
     </a>
   
   
-    <a href="/2026/10/24/cuotiben/408/OS/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%B1%A4%E5%B0%8F%E4%B8%B9/Chapter1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">计算机操作系统第一章错题</div>
+    <a href="/2026/11/07/cuotiben/bok27/OS/OS_day5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OS每日一题 Day5</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -668,11 +677,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机组成</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机组成</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -700,6 +709,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">考研数学</a>
               </li>
              
@@ -709,14 +726,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">格林公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenGL</a>
               </li>
              
               <li class="article-tag-list-item">
